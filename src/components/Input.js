@@ -6,6 +6,16 @@ const Input = ({ display, setDisplay }) => {
   const [resultShown, setResultShown] = useState(false);
 
   const handleNumClick = (e) => {
+    // if (display.indexOf(",")) {
+    //   setDisplay(
+    //     display
+    //       .split("")
+    //       .map((val) => (val === "," ? "" : val))
+    //       .concat(e.target.value)
+    //       .join("")
+    //   );
+    // }
+
     if (display.length === 1 && display[0] === "0") {
       setDisplay(e.target.value);
     } else if (resultShown) {
@@ -28,6 +38,9 @@ const Input = ({ display, setDisplay }) => {
       setDisplay((prevDisplay) =>
         prevDisplay.slice(0, lastChar).concat(e.target.value)
       );
+    } else if (resultShown) {
+      setResultShown(false);
+      setDisplay("0");
     } else {
       setDisplay((prevDisplay) => prevDisplay.concat(e.target.value));
     }
@@ -46,7 +59,16 @@ const Input = ({ display, setDisplay }) => {
   };
 
   const handleResult = () => {
-    setDisplay(evaluate(display) + "");
+    if (
+      display === "0-" ||
+      display === "0+" ||
+      display === "0*" ||
+      display === "0/"
+    ) {
+      return;
+    }
+
+    setDisplay(evaluate(display).toLocaleString());
     setResultShown(true);
   };
 

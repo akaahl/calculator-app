@@ -69,7 +69,7 @@ const StyledHeader = styled.header`
       align-items: center;
       /* justify-content: flex-start; */
       position: relative;
-      transition: all 0.5s ease-in-out;
+      transition: all 0.2s ease-in-out;
 
       &.one {
         .circle {

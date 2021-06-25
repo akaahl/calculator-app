@@ -24,7 +24,7 @@ const StyledDisplay = styled.div`
   span {
     color: white;
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 700;
     font-family: "Spartan", sans-serif;
     width: 100%;
     word-wrap: break-word;
