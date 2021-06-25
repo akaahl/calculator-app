@@ -3,20 +3,31 @@ import styled from "styled-components";
 import { evaluate } from "mathjs";
 
 const Input = ({ display, setDisplay }) => {
+  const [resultShown, setResultShown] = useState(false);
+
   const handleNumClick = (e) => {
     if (display.length === 1 && display[0] === "0") {
+      setDisplay(e.target.value);
+    } else if (resultShown) {
+      setResultShown(false);
       setDisplay(e.target.value);
     } else {
       setDisplay((prevDisplay) => prevDisplay.concat(e.target.value));
     }
-    console.log(display);
   };
 
   const handleSignClick = (e) => {
     const lastChar = display.length - 1;
 
-    if (display[lastChar] === e.target.value) {
-      setDisplay((prevDisplay) => prevDisplay.concat(""));
+    if (
+      display[lastChar] === "+" ||
+      display[lastChar] === "-" ||
+      display[lastChar] === "/" ||
+      display[lastChar] === "*"
+    ) {
+      setDisplay((prevDisplay) =>
+        prevDisplay.slice(0, lastChar).concat(e.target.value)
+      );
     } else {
       setDisplay((prevDisplay) => prevDisplay.concat(e.target.value));
     }
@@ -36,6 +47,7 @@ const Input = ({ display, setDisplay }) => {
 
   const handleResult = () => {
     setDisplay(evaluate(display) + "");
+    setResultShown(true);
   };
 
   return (
