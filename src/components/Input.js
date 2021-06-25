@@ -1,39 +1,41 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { evaluate } from "mathjs";
 
 const Input = ({ display, setDisplay }) => {
-  //   const handleNumClick = (e) => {
-  //     if (display === '0') {
-  //       setDisplay(e.target.value)
-  //       }
-  //     }
-  //   };
   const handleNumClick = (e) => {
     if (display.length === 1 && display[0] === "0") {
-      setDisplay([...display, e.target.value].slice(1));
+      setDisplay(e.target.value);
     } else {
-      setDisplay([...display, e.target.value]);
+      setDisplay((prevDisplay) => prevDisplay.concat(e.target.value));
     }
+    console.log(display);
   };
 
   const handleSignClick = (e) => {
-    setDisplay([...display, " ", e.target.value, " "]);
+    const lastChar = display.length - 1;
+
+    if (display[lastChar] === e.target.value) {
+      setDisplay((prevDisplay) => prevDisplay.concat(""));
+    } else {
+      setDisplay((prevDisplay) => prevDisplay.concat(e.target.value));
+    }
   };
 
   const handleReset = (e) => {
-    setDisplay([0]);
+    setDisplay("0");
   };
 
   const handleDelete = (e) => {
     if (display.length === 1) {
-      setDisplay(["0"]);
+      setDisplay("0");
     } else {
-      setDisplay([...display].slice(0, display.length - 1));
+      setDisplay((prevDisplay) => prevDisplay.slice(0, prevDisplay.length - 1));
     }
   };
 
   const handleResult = () => {
-    console.log(evaluate(display.join("")));
+    setDisplay(evaluate(display) + "");
   };
 
   return (

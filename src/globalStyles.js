@@ -10,7 +10,8 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Spartan', sans-serif;
-  background: hsl(222, 26%, 31%);
+  /* background: hsl(222, 26%, 31%); */
+  /* min-height: 100vh; */
 
   }
 `;

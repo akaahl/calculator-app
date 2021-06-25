@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Display = ({ display, setDisplay }) => {
   return (
     <StyledDisplay className="display">
-      <span>{Number(display.join("")).toLocaleString()}</span>
+      <span>{display}</span>
     </StyledDisplay>
   );
 };
@@ -14,11 +14,12 @@ const StyledDisplay = styled.div`
   border-radius: 10px;
   background: hsl(224, 36%, 15%);
   margin-top: 1.5rem;
+
   padding: 2rem 1rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  /* overflow: hidden; */
+  overflow: hidden;
 
   span {
     color: white;
@@ -26,7 +27,8 @@ const StyledDisplay = styled.div`
     font-weight: 600;
     font-family: "Spartan", sans-serif;
     width: 100%;
-    overflow: hidden;
+    word-wrap: break-word;
+    /* overflow: hidden; */
     text-align: right;
   }
 `;

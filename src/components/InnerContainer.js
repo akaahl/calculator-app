@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { useState } from "react";
 
 const InnerContainer = () => {
-  const [display, setDisplay] = useState(["0"]);
+  const [display, setDisplay] = useState("0");
 
   return (
     <StyledWrapper>
@@ -17,10 +17,9 @@ const InnerContainer = () => {
 };
 
 const StyledWrapper = styled.div`
-  /* margin-top: -2rem; */
-  height: 90vh;
+  min-height: 90vh;
   width: 400px;
-  /* overflow: hidden; */
+  margin: 4rem auto;
 `;
 
 export default InnerContainer;
