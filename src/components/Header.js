@@ -1,9 +1,6 @@
 import styled from "styled-components";
-import { useState } from "react";
 
-const Header = () => {
-  const [theme, setTheme] = useState(1);
-
+const Header = ({ themeColor, setThemeColor }) => {
   return (
     <StyledHeader>
       <h1>calc</h1>
@@ -12,23 +9,23 @@ const Header = () => {
         <span>Theme</span>
         <div
           className={
-            theme === 1
+            themeColor === 1
               ? "theme-toggler one"
-              : theme === 2
+              : themeColor === 2
               ? "theme-toggler two"
-              : theme === 3
+              : themeColor === 3
               ? "theme-toggler three"
               : "theme-toggler"
           }
         >
           <div className="circle"></div>
-          <button className="btn one" onClick={() => setTheme(1)}>
+          <button className="btn one" onClick={() => setThemeColor(1)}>
             1
           </button>
-          <button className="btn two" onClick={() => setTheme(2)}>
+          <button className="btn two" onClick={() => setThemeColor(2)}>
             2
           </button>
-          <button className="btn three" onClick={() => setTheme(3)}>
+          <button className="btn three" onClick={() => setThemeColor(3)}>
             3
           </button>
         </div>
@@ -43,7 +40,7 @@ const StyledHeader = styled.header`
   justify-content: space-between;
 
   h1 {
-    color: hsl(0, 0%, 100%);
+    color: ${(props) => props.theme.fontColor};
     font-size: 2rem;
   }
 
@@ -53,8 +50,8 @@ const StyledHeader = styled.header`
 
     span {
       text-transform: uppercase;
-      color: hsl(0, 0%, 100%);
-      font-weight: 500;
+      color: ${(props) => props.theme.fontColor};
+      font-weight: 700;
       font-size: 0.8rem;
       margin-right: 1rem;
     }
@@ -63,7 +60,7 @@ const StyledHeader = styled.header`
       width: 4.2rem;
       height: 1.5rem;
       border-radius: 1.5rem;
-      background: hsl(223, 31%, 20%);
+      background: ${(props) => props.theme.togglerBackground};
       padding: 5px;
       display: flex;
       align-items: center;
@@ -94,7 +91,7 @@ const StyledHeader = styled.header`
         left: 7%;
         height: 1rem;
         width: 1rem;
-        background: hsl(25, 98%, 40%);
+        background: ${(props) => props.theme.togglerCircle};
         border-radius: 50%;
         transition: all 0.3s ease-in-out;
       }
@@ -104,8 +101,8 @@ const StyledHeader = styled.header`
         background: none;
         border: none;
         cursor: pointer;
-        color: hsl(0, 0%, 100%);
-        font-weight: 500;
+        color: ${(props) => props.theme.fontColor};
+        font-weight: 600;
 
         &.one {
           top: -1.2rem;

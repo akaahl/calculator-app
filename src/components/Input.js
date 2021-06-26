@@ -136,7 +136,7 @@ const Input = ({ display, setDisplay }) => {
 };
 
 const StyledInput = styled.div`
-  background: hsl(223, 31%, 20%);
+  background: ${(props) => props.theme.inputBackground};
   margin-top: 2rem;
   width: 100%;
   /* height: 100%; */
@@ -152,15 +152,15 @@ const StyledInput = styled.div`
     "reset reset result result";
 
   button {
-    background: hsl(30, 25%, 89%);
+    background: ${(props) => props.theme.numPadBackground};
     border-radius: 10px;
     border: none;
     height: 3rem;
     /* width: 6rem; */
-    color: hsl(224, 28%, 35%);
+    color: ${(props) => props.theme.numColor};
     font-size: 2rem;
     font-weight: 600;
-    box-shadow: 0 4px 0 hsl(28, 16%, 65%);
+    box-shadow: ${(props) => props.theme.numPadShadow};
     cursor: pointer;
 
     &.zero {
@@ -240,15 +240,15 @@ const StyledInput = styled.div`
     &.reset {
       font-size: 1.2rem;
       text-transform: uppercase;
-      color: hsl(0, 0%, 100%);
-      background: hsl(225, 21%, 49%);
-      box-shadow: 0 4px hsl(224, 28%, 35%);
+      color: ${(props) => props.theme.delFontColor};
+      background: ${(props) => props.theme.delBackground};
+      box-shadow: ${(props) => props.theme.delShadow};
     }
 
     &.result {
-      background: hsl(6, 63%, 50%);
-      box-shadow: 0 4px hsl(6, 70%, 34%);
-      color: white;
+      background: ${(props) => props.theme.resultBackground};
+      box-shadow: ${(props) => props.theme.resultShadow};
+      color: ${(props) => props.theme.resultFontColor};
       font-size: 1rem;
     }
   }

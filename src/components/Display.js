@@ -12,7 +12,7 @@ const StyledDisplay = styled.div`
   width: 100%;
   min-height: 6rem;
   border-radius: 10px;
-  background: hsl(224, 36%, 15%);
+  background: ${(props) => props.theme.displayBackground};
   margin-top: 1.5rem;
 
   padding: 2rem 1rem;
@@ -22,7 +22,7 @@ const StyledDisplay = styled.div`
   overflow: hidden;
 
   span {
-    color: white;
+    color: ${(props) => props.theme.fontColor};
     font-size: 3rem;
     font-weight: 700;
     font-family: "Spartan", sans-serif;

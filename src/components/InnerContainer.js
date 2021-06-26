@@ -4,12 +4,12 @@ import Input from "./Input";
 import styled from "styled-components";
 import { useState } from "react";
 
-const InnerContainer = () => {
+const InnerContainer = ({ themeColor, setThemeColor }) => {
   const [display, setDisplay] = useState("0");
 
   return (
     <StyledWrapper>
-      <Header />
+      <Header themeColor={themeColor} setThemeColor={setThemeColor} />
       <Display display={display} setDisplay={setDisplay} />
       <Input display={display} setDisplay={setDisplay} />
     </StyledWrapper>
