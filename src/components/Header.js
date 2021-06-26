@@ -42,6 +42,7 @@ const StyledHeader = styled.header`
   h1 {
     color: ${(props) => props.theme.fontColor};
     font-size: 2rem;
+    transition: color 0.3s ease-in-out;
   }
 
   .theme-switcher {
@@ -54,6 +55,7 @@ const StyledHeader = styled.header`
       font-weight: 700;
       font-size: 0.8rem;
       margin-right: 1rem;
+      transition: color 0.3s ease-in-out;
     }
 
     .theme-toggler {
@@ -64,7 +66,6 @@ const StyledHeader = styled.header`
       padding: 5px;
       display: flex;
       align-items: center;
-      /* justify-content: flex-start; */
       position: relative;
       transition: all 0.2s ease-in-out;
 
@@ -103,6 +104,7 @@ const StyledHeader = styled.header`
         cursor: pointer;
         color: ${(props) => props.theme.fontColor};
         font-weight: 600;
+        transition: color 0.3s ease-in-out;
 
         &.one {
           top: -1.2rem;

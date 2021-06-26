@@ -18,7 +18,7 @@ const InnerContainer = ({ themeColor, setThemeColor }) => {
 
 const StyledWrapper = styled.div`
   min-height: 90vh;
-  width: 400px;
+  width: 500px;
   margin: 4rem auto;
 `;
 

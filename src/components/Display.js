@@ -14,12 +14,12 @@ const StyledDisplay = styled.div`
   border-radius: 10px;
   background: ${(props) => props.theme.displayBackground};
   margin-top: 1.5rem;
-
   padding: 2rem 1rem;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   overflow: hidden;
+  transition: background 0.3s ease-in-out;
 
   span {
     color: ${(props) => props.theme.fontColor};
@@ -30,6 +30,7 @@ const StyledDisplay = styled.div`
     word-wrap: break-word;
     /* overflow: hidden; */
     text-align: right;
+    transition: color 0.3s ease-in-out;
   }
 `;
 

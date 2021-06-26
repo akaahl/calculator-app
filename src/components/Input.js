@@ -156,12 +156,13 @@ const StyledInput = styled.div`
     border-radius: 10px;
     border: none;
     height: 3rem;
-    /* width: 6rem; */
     color: ${(props) => props.theme.numColor};
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 1.7rem;
     box-shadow: ${(props) => props.theme.numPadShadow};
     cursor: pointer;
+    font-family: "Spartan", sans-serif;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
 
     &.zero {
       grid-area: zero;

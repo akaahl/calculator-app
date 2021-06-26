@@ -27,6 +27,7 @@ const StyledContainer = styled.main`
   height: 100vh;
   background: ${(props) => props.theme.mainBackground};
   overflow-y: scroll;
+  transition: background 0.3s ease-in-out;
 `;
 
 export default App;
