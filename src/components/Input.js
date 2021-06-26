@@ -7,16 +7,6 @@ const Input = ({ display, setDisplay }) => {
   const lastChar = display.length - 1;
 
   const handleNumClick = (e) => {
-    // if (display.indexOf(",")) {
-    //   setDisplay(
-    //     display
-    //       .split("")
-    //       .map((val) => (val === "," ? "" : val))
-    //       .concat(e.target.value)
-    //       .join("")
-    //   );
-    // }
-
     if (display.length === 1 && display[0] === "0") {
       setDisplay(e.target.value);
     } else if (resultShown) {
@@ -32,7 +22,8 @@ const Input = ({ display, setDisplay }) => {
       display[lastChar] === "+" ||
       display[lastChar] === "-" ||
       display[lastChar] === "/" ||
-      display[lastChar] === "*"
+      display[lastChar] === "*" ||
+      display[lastChar] === "."
     ) {
       setDisplay((prevDisplay) =>
         prevDisplay.slice(0, lastChar).concat(e.target.value)
@@ -113,7 +104,7 @@ const Input = ({ display, setDisplay }) => {
       <button className="btn minus" value="-" onClick={handleSignClick}>
         -
       </button>
-      <button className="btn point" value="." onClick={handleNumClick}>
+      <button className="btn point" value="." onClick={handleSignClick}>
         .
       </button>
       <button className="btn zero" value="0" onClick={handleNumClick}>
