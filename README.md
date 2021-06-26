@@ -75,7 +75,7 @@ function App() {
 
 ### Continued development
 
-In the future, I'll be adding the number formatting feature when multiple arithmetic operations are clicked within the same calculation. I've been struggling with it for a while, hence I found an acceptable solution, I'll update the app accordingly.
+In the future, I'll be adding the number formatting feature when multiple arithmetic operations are clicked within the same calculation. I've been struggling with it for a while, hence once I found an acceptable solution, I'll update the app accordingly.
 
 ### Useful resources
 
