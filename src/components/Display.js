@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Display = ({ display, setDisplay }) => {
+const Display = ({ display }) => {
   return (
     <StyledDisplay className="display">
       <span>{display}</span>
@@ -28,7 +28,6 @@ const StyledDisplay = styled.div`
     font-family: "Spartan", sans-serif;
     width: 100%;
     word-wrap: break-word;
-    /* overflow: hidden; */
     text-align: right;
     transition: color 0.3s ease-in-out;
   }

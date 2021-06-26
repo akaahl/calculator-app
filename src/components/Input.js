@@ -130,7 +130,6 @@ const StyledInput = styled.div`
   background: ${(props) => props.theme.inputBackground};
   margin-top: 2rem;
   width: 100%;
-  /* height: 100%; */
   border-radius: 10px;
   padding: 1.5rem;
   display: grid;

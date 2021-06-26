@@ -10,7 +10,7 @@ const InnerContainer = ({ themeColor, setThemeColor }) => {
   return (
     <StyledWrapper>
       <Header themeColor={themeColor} setThemeColor={setThemeColor} />
-      <Display display={display} setDisplay={setDisplay} />
+      <Display display={display} />
       <Input display={display} setDisplay={setDisplay} />
     </StyledWrapper>
   );
