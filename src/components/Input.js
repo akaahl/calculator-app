@@ -4,6 +4,7 @@ import { evaluate } from "mathjs";
 
 const Input = ({ display, setDisplay }) => {
   const [resultShown, setResultShown] = useState(false);
+  const lastChar = display.length - 1;
 
   const handleNumClick = (e) => {
     // if (display.indexOf(",")) {
@@ -27,8 +28,6 @@ const Input = ({ display, setDisplay }) => {
   };
 
   const handleSignClick = (e) => {
-    const lastChar = display.length - 1;
-
     if (
       display[lastChar] === "+" ||
       display[lastChar] === "-" ||
@@ -63,7 +62,11 @@ const Input = ({ display, setDisplay }) => {
       display === "0-" ||
       display === "0+" ||
       display === "0*" ||
-      display === "0/"
+      display === "0/" ||
+      display[lastChar] === "+" ||
+      display[lastChar] === "-" ||
+      display[lastChar] === "*" ||
+      display[lastChar] === "/"
     ) {
       return;
     }
