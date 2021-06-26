@@ -89,6 +89,6 @@ In the future, I'll be adding the number formatting feature when multiple arithm
 
 ## Acknowledgments
 
-I would like to express my thanks and acknowledgements to [Agata Liberska](https://www.frontendmentor.io/profile/AgataLiberska), as I derived the hover states of the keypad based on her color picks. And her solution, I think, is probably the best for this challenge. Check out her solution (here)[https://www.frontendmentor.io/solutions/calculator-app-html-css-js-tried-to-focus-on-accessibility-2yw2AOpoa].
+I would like to express my thanks and acknowledgements to [Agata Liberska](https://www.frontendmentor.io/profile/AgataLiberska), as I derived the hover states of the keypad based on her color picks. And her solution, I think, is probably the best for this challenge. Check out her solution [here](https://www.frontendmentor.io/solutions/calculator-app-html-css-js-tried-to-focus-on-accessibility-2yw2AOpoa).
 
 Last but not least, thank you the FEM and its community for providing interesting challenges that pushes my skills and beyond.
