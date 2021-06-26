@@ -164,6 +164,10 @@ const StyledInput = styled.div`
     font-weight: 700;
     transition: all 0.3s ease-in-out;
 
+    &:hover {
+      background: ${(props) => props.theme.numPadHover};
+    }
+
     &.zero {
       grid-area: zero;
     }
@@ -244,6 +248,10 @@ const StyledInput = styled.div`
       color: ${(props) => props.theme.delFontColor};
       background: ${(props) => props.theme.delBackground};
       box-shadow: ${(props) => props.theme.delShadow};
+
+      &:hover {
+        background: ${(props) => props.theme.delBackgroundHover};
+      }
     }
 
     &.result {
@@ -251,6 +259,10 @@ const StyledInput = styled.div`
       box-shadow: ${(props) => props.theme.resultShadow};
       color: ${(props) => props.theme.resultFontColor};
       font-size: 1rem;
+
+      &:hover {
+        background: ${(props) => props.theme.resultBackgroundHover};
+      }
     }
   }
 `;
