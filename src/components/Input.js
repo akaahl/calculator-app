@@ -41,10 +41,13 @@ const Input = ({ display, setDisplay }) => {
   };
 
   const handleDelete = (e) => {
-    if (display.length === 1) {
-      setDisplay("0");
+     if (display.length === 1) {
+      setDisplay('0');
+    } else if (resultShown) {
+      setResultShown(false);
+      setDisplay('0');
     } else {
-      setDisplay((prevDisplay) => prevDisplay.slice(0, prevDisplay.length - 1));
+      setDisplay(prevDisplay => prevDisplay.slice(0, prevDisplay.length - 1));
     }
   };
 
