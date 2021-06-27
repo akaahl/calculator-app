@@ -20,13 +20,13 @@ const Header = ({ themeColor, setThemeColor }) => {
         >
           <div className="circle"></div>
           <button className="btn one" onClick={() => setThemeColor(1)}>
-            1
+            <span>1</span>
           </button>
           <button className="btn two" onClick={() => setThemeColor(2)}>
-            2
+            <span>2</span>
           </button>
           <button className="btn three" onClick={() => setThemeColor(3)}>
-            3
+            <span>3</span>
           </button>
         </div>
       </div>
@@ -105,6 +105,15 @@ const StyledHeader = styled.header`
         color: ${(props) => props.theme.fontColor};
         font-weight: 600;
         transition: color 0.3s ease-in-out;
+        height: 2.5rem;
+        width: 1.5rem;
+        line-height: -1rem;
+
+        span {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
 
         &.one {
           top: -1.2rem;

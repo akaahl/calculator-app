@@ -129,6 +129,7 @@ const Input = ({ display, setDisplay }) => {
 const StyledInput = styled.div`
   background: ${(props) => props.theme.inputBackground};
   margin-top: 2rem;
+  /* height: 100%; */
   width: 100%;
   border-radius: 10px;
   padding: 1.5rem;
@@ -252,6 +253,20 @@ const StyledInput = styled.div`
 
       &:hover {
         background: ${(props) => props.theme.resultBackgroundHover};
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    padding: 0.8rem;
+    grid-gap: 0.8rem 0.7rem;
+
+    button {
+      font-size: 1.3rem;
+
+      &.delete,
+      &.reset {
+        font-size: 1rem;
       }
     }
   }

@@ -31,6 +31,15 @@ const StyledDisplay = styled.div`
     text-align: right;
     transition: color 0.3s ease-in-out;
   }
+
+  @media (max-width: 425px) {
+    min-height: 5rem;
+    padding: 1rem;
+
+    span {
+      font-size: 2rem;
+    }
+  }
 `;
 
 export default Display;

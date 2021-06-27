@@ -27,6 +27,9 @@ const StyledContainer = styled.main`
   height: 100vh;
   background: ${(props) => props.theme.mainBackground};
   overflow-y: scroll;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: background 0.3s ease-in-out;
 `;
 

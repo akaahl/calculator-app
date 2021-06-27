@@ -17,9 +17,17 @@ const InnerContainer = ({ themeColor, setThemeColor }) => {
 };
 
 const StyledWrapper = styled.div`
-  min-height: 90vh;
+  /* min-height: 90vh; */
   width: 500px;
-  margin: 4rem auto;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+
+  @media (max-width: 425px) {
+    width: 90%;
+    margin: 4rem auto;
+  }
 `;
 
 export default InnerContainer;
