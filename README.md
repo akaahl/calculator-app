@@ -75,10 +75,19 @@ function App() {
 
 ### Continued development
 
+_Update_
+
+I've managed to to fix the formatting issues by using useState to store the display on another state and then useEffect to implement the formatting when the display changes.
+
+This [StackOverflow link](https://stackoverflow.com/questions/68150876/how-to-format-number-correctly-in-a-calculator-app-react) perfectly provides the optimal solution to it. Credit goes to [Avinash Thakur](https://stackoverflow.com/users/11218031/avinash-thakur)
+
+~~
 In the future, I'll be adding the number formatting feature when multiple arithmetic operations are clicked within the same calculation. I've been struggling with it for a while, hence once I found an acceptable solution, I'll update the app accordingly.
+~~
 
 ### Useful resources
 
+- [StackOverflow link](https://stackoverflow.com/questions/68150876/how-to-format-number-correctly-in-a-calculator-app-react) - This is a question that I posted myself and Avinash Thakur provides a great solution to the formatting issues. Credit goes to [him](https://stackoverflow.com/users/11218031/avinash-thakur)
 - [Medium Article](https://medium.com/swlh/create-a-dark-mode-of-your-app-using-styled-components-a44bc5a59330) - This helped me for creating a dark mode with styled components; upon which I used to create the theme switcher.
 - [YT Styled Components Dark Mode](https://www.youtube.com/watch?v=G00V4tRx1ME) - This is a helpful resource for those who are looking for a visual companion to the article above.
 
