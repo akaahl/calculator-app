@@ -1,9 +1,17 @@
 import styled from "styled-components";
+import { useState, useEffect } from "react";
 
 const Display = ({ display }) => {
+  const [printValue, setPrintValue] = useState("");
+
+  useEffect(() => {
+    setPrintValue(
+      `${display}`.replace(/[0-9]+/g, (num) => (+num).toLocaleString())
+    );
+  }, [display]);
   return (
     <StyledDisplay className="display">
-      <span>{display}</span>
+      <span>{printValue}</span>
     </StyledDisplay>
   );
 };

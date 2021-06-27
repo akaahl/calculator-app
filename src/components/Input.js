@@ -62,7 +62,7 @@ const Input = ({ display, setDisplay }) => {
       return;
     }
 
-    setDisplay(evaluate(display).toLocaleString());
+    setDisplay(evaluate(display));
     setResultShown(true);
   };
 
